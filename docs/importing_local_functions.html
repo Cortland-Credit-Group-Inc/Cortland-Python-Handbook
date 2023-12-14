@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Importing Functions from Other Scripts/Folders: Best Practices &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Coding Guidelines" href="Coding_Guidelines.html" />
+    <link rel="prev" title="Pickle File in Python" href="Pickle_File.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cortland-Python-Handbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Environment_Management.html">Environment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitHub.html">Basic GitHub Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_Essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pickle_File.html">Pickle File in Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Importing Functions from Other Scripts/Folders: Best Practices</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#basic-importing-from-a-script">Basic Importing from a Script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-init-py-for-package-initialization">Using <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> for Package Initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#relative-imports-for-deeper-folder-structures">Relative Imports for Deeper Folder Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#importing-scripts-from-a-different-folder-under-the-same-parent-folder">Importing Scripts from a Different Folder Under the Same Parent Folder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#structuring-your-project"><strong>Structuring Your Project</strong></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-absolute-imports">Using Absolute Imports</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#utilizing-init-py-for-package-recognition">Utilizing <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> for Package Recognition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relative-imports-for-same-level-subfolders">Relative Imports for Same-Level Subfolders</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#best-practices">Best Practices</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Coding_Guidelines.html">Coding Guidelines</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cortland-Python-Handbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Importing Functions from Other Scripts/Folders: Best Practices</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/importing_local_functions.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="importing-functions-from-other-scripts-folders-best-practices">
+<h1>Importing Functions from Other Scripts/Folders: Best Practices<a class="headerlink" href="#importing-functions-from-other-scripts-folders-best-practices" title="Link to this heading"></a></h1>
+<p>In this section, we’ll cover the best practices for importing functions from other scripts or folders in your Python projects. Understanding how to effectively manage imports is crucial for maintaining an organized, readable, and efficient codebase.</p>
+<section id="basic-importing-from-a-script">
+<h2>Basic Importing from a Script<a class="headerlink" href="#basic-importing-from-a-script" title="Link to this heading"></a></h2>
+<p><strong>Same Directory:</strong></p>
+<ul>
+<li><p>If the script you are importing from is in the same directory, you can simply use the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement.</p></li>
+<li><p>Example:</p>
+<ul>
+<li><p>File Structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project_directory/
+├──<span class="w"> </span>main.py
+└──<span class="w"> </span>helpers.py
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">main.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Importing Specific Functions:</strong></p>
+<ul>
+<li><p>You can import specific functions from a script to avoid loading unnecessary code.</p></li>
+<li><p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">helpers</span> <span class="kn">import</span> <span class="n">some_function</span>
+<span class="n">some_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Importing from Subdirectories:</strong></p>
+<ul>
+<li><p>For scripts in subdirectories, use dot notation to navigate the folder structure.</p></li>
+<li><p>Example:</p>
+<ul>
+<li><p>File Structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project_directory/
+├──<span class="w"> </span>main.py
+└──<span class="w"> </span>subfolder/
+<span class="w">    </span>└──<span class="w"> </span>helpers.py
+</pre></div>
+</div>
+<p>In <code class="docutils literal notranslate"><span class="pre">main.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">subfolder</span> <span class="kn">import</span> <span class="n">helpers</span>
+<span class="n">helpers</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="using-init-py-for-package-initialization">
+<h2>Using <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> for Package Initialization<a class="headerlink" href="#using-init-py-for-package-initialization" title="Link to this heading"></a></h2>
+<p>Package Initialization with <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>:</p>
+<ul class="simple">
+<li><p>In Python, a directory with an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file is treated as a package.</p></li>
+<li><p>This allows you to import modules from this package.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file can be empty or contain initialization code for the package.</p></li>
+</ul>
+</section>
+<section id="relative-imports-for-deeper-folder-structures">
+<h2>Relative Imports for Deeper Folder Structures<a class="headerlink" href="#relative-imports-for-deeper-folder-structures" title="Link to this heading"></a></h2>
+<p><strong>Relative Imports:</strong></p>
+<ul>
+<li><p>In a deeper folder structure, relative imports using dots (.) can be helpful.</p></li>
+<li><p>Example:</p>
+<ul>
+<li><p>File Structure:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project_directory/
+├──<span class="w"> </span>main.py
+└──<span class="w"> </span>subfolder/
+<span class="w">    </span>├──<span class="w"> </span>__init__.py
+<span class="w">    </span>└──<span class="w"> </span>deeper_subfolder/
+<span class="w">        </span>└──<span class="w"> </span>deep_helpers.py
+</pre></div>
+</div>
+<p>In a script inside <code class="docutils literal notranslate"><span class="pre">subfolder</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">.deeper_subfolder</span> <span class="kn">import</span> <span class="n">deep_helpers</span>
+<span class="n">deep_helpers</span><span class="o">.</span><span class="n">another_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="importing-scripts-from-a-different-folder-under-the-same-parent-folder">
+<h2>Importing Scripts from a Different Folder Under the Same Parent Folder<a class="headerlink" href="#importing-scripts-from-a-different-folder-under-the-same-parent-folder" title="Link to this heading"></a></h2>
+<p>When working with a project that has multiple subdirectories under a common parent directory, you might need to import a script from one subdirectory into a script in another subdirectory. Here’s how you can do it:</p>
+<section id="structuring-your-project">
+<h3><strong>Structuring Your Project</strong><a class="headerlink" href="#structuring-your-project" title="Link to this heading"></a></h3>
+<p>First, let’s consider a typical project structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>Copy codeproject_directory/
+│
+├── subfolder1/
+│   └── module1.py
+│
+└── subfolder2/
+    └── module2.py
+</pre></div>
+</div>
+<p>In this structure, <code class="docutils literal notranslate"><span class="pre">module1.py</span></code> is in <code class="docutils literal notranslate"><span class="pre">subfolder1</span></code>, and <code class="docutils literal notranslate"><span class="pre">module2.py</span></code> is in <code class="docutils literal notranslate"><span class="pre">subfolder2</span></code>. Both subfolders are under <code class="docutils literal notranslate"><span class="pre">project_directory</span></code>.</p>
+</section>
+<section id="using-absolute-imports">
+<h3>Using Absolute Imports<a class="headerlink" href="#using-absolute-imports" title="Link to this heading"></a></h3>
+<ol>
+<li><p><strong>Absolute Imports:</strong></p>
+<ul>
+<li><p>Use absolute imports to reference the module’s full path from the project root.</p></li>
+<li><p>This approach is clear and easy to understand, especially for larger projects.</p></li>
+<li><p>Example:</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">module2.py</span></code> (inside <code class="docutils literal notranslate"><span class="pre">subfolder2</span></code>), to import <code class="docutils literal notranslate"><span class="pre">module1.py</span></code> from <code class="docutils literal notranslate"><span class="pre">subfolder1</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">subfolder1</span> <span class="kn">import</span> <span class="n">module1</span>
+<span class="n">module1</span><span class="o">.</span><span class="n">some_function</span><span class="p">()</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Modifying sys.path</strong></p>
+<ul>
+<li><p>Python’s <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> is a list of directories that the interpreter searches for modules.</p></li>
+<li><p>You can append a folder to <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> to make Python aware of it.</p></li>
+<li><p><strong>Note:</strong> This method is less preferred as it can make your code harder to understand and maintain.</p></li>
+<li><p>Example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;/path/to/project_directory/subfolder1&#39;</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">module1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ol>
+<section id="utilizing-init-py-for-package-recognition">
+<h4>Utilizing <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> for Package Recognition<a class="headerlink" href="#utilizing-init-py-for-package-recognition" title="Link to this heading"></a></h4>
+<ol class="simple">
+<li><p>Package Recognition with <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>:</p>
+<ul class="simple">
+<li><p>Ensure each folder in your project (like <code class="docutils literal notranslate"><span class="pre">subfolder1</span></code> and <code class="docutils literal notranslate"><span class="pre">subfolder2</span></code>) has an <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> file, even if it’s empty.</p></li>
+<li><p>This file makes Python treat the directories as packages, allowing for easier imports.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="relative-imports-for-same-level-subfolders">
+<h4>Relative Imports for Same-Level Subfolders<a class="headerlink" href="#relative-imports-for-same-level-subfolders" title="Link to this heading"></a></h4>
+<ul>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">subfolder1</span></code> and <code class="docutils literal notranslate"><span class="pre">subfolder2</span></code> are at the same level, you can use relative imports.</p></li>
+<li><p>Example:</p>
+<ul>
+<li><p>In <code class="docutils literal notranslate"><span class="pre">module2.py</span></code>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">..subfolder1</span> <span class="kn">import</span> <span class="n">module1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Caution:</strong> Relative imports can be tricky and are less clear than absolute imports, especially for someone new to the project.</p></li>
+</ul>
+</section>
+</section>
+<section id="best-practices">
+<h3>Best Practices<a class="headerlink" href="#best-practices" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Prefer Absolute Imports:</strong> They are more readable and usually the best practice in larger, more complex projects.</p></li>
+<li><p><strong>Keep a Logical Structure:</strong> Organize your project in a way that makes the relationships between files clear.</p></li>
+<li><p><strong>Keep Your Structure Simple:</strong> Avoid overly complex directory structures. A simpler structure makes it easier to manage imports.</p></li>
+<li><p><strong>Avoid sys.path Modifications:</strong> While modifying <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> can solve your problem, it can introduce maintenance challenges and is not a standard practice.</p></li>
+<li><p><strong>Use <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> for Clarity:</strong> These files can be empty, but their presence helps Python recognize package structures.</p></li>
+<li><p><strong>Avoid Circular Imports:</strong> Circular imports (where two modules import each other) can lead to problems in execution. Restructure your code to prevent this.</p></li>
+<li><p><strong>Organize Your Imports:</strong> At the beginning of each file, group your imports logically (standard library imports, third-party imports, and then your own module imports).</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Pickle_File.html" class="btn btn-neutral float-left" title="Pickle File in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Coding_Guidelines.html" class="btn btn-neutral float-right" title="Coding Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bokun Huang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

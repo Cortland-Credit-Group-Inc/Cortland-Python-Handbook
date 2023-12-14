@@ -1,0 +1,11 @@
+# Introduction
+
+This handbook is designed as a comprehensive guide for new Co-op students. We aim to equip you with the foundational knowledge and essential rules for effective Python development in Cortland Credit. 
+
+**What You Will Learn**
+
+- **Anaconda Environment Management:** Gain crucial insights into managing Python environments using Anaconda. This knowledge is vital for maintaining project-specific dependencies and ensuring a consistent development environment, which is a cornerstone of professional Python development.
+- **GitHub Usage:** Learn how to effectively use GitHub for version control and collaboration. This includes understanding basic operations such as branching, committing, pushing, pulling, and merging, as well as best practices for managing code in a shared repository.
+- **Essential Python Concepts and Operations:** Dive into the core elements of Python programming, including classes, decorators, and common data operations. This section lays the groundwork for understanding Python’s syntax and functionalities.
+- **Python Development Guidelines for Interns:** Discover a set of guidelines tailored to ensure you write clean, efficient, and maintainable code. From handling date variables to structuring your program correctly, these rules are pivotal in professional Python development.
+- **Importing Functions and Scripts Management:** Learn the intricacies of importing functions and managing scripts across different folders. This knowledge is crucial for working on larger projects where code organization becomes key.

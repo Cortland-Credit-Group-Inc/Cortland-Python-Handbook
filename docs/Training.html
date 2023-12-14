@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Training &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cortland-Python-Handbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Environment_Management.html">Environment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="GitHub.html">Basic GitHub Operations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Python_Essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Pickle_File.html">Pickle File in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing_local_functions.html">Importing Functions from Other Scripts/Folders: Best Practices</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Coding_Guidelines.html">Coding Guidelines</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cortland-Python-Handbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Training</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Training.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="training">
+<h1>Training<a class="headerlink" href="#training" title="Link to this heading"></a></h1>
+<section id="use-anaconda">
+<h2>Use Anaconda<a class="headerlink" href="#use-anaconda" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Add anaconda to the path.</p></li>
+</ul>
+</section>
+<section id="environment-management">
+<h2>Environment Management<a class="headerlink" href="#environment-management" title="Link to this heading"></a></h2>
+<section id="introduction-to-anaconda-environment-management">
+<h3>Introduction to Anaconda Environment Management<a class="headerlink" href="#introduction-to-anaconda-environment-management" title="Link to this heading"></a></h3>
+<p>Welcome to the world of Python programming with Anaconda! This manual is designed to guide you through the process of creating and managing separate environments for your Python projects, ensuring a safe and efficient development experience.</p>
+</section>
+<section id="understanding-anaconda-environments">
+<h3>Understanding Anaconda Environments<a class="headerlink" href="#understanding-anaconda-environments" title="Link to this heading"></a></h3>
+<p>An Anaconda environment is a self-contained directory that houses a specific version of Python and various packages. This separation is crucial for preventing dependency conflicts between different projects.</p>
+</section>
+<section id="key-principle-avoid-the-base-environment">
+<h3>Key Principle: Avoid the Base Environment<a class="headerlink" href="#key-principle-avoid-the-base-environment" title="Link to this heading"></a></h3>
+<p><strong>Crucial Advice:</strong> Do not develop your work in the base environment. The base environment is your Anaconda installation’s default setting. For each new project, you should create a new environment. This practice keeps your primary workspace clean and free from conflicts.</p>
+</section>
+<section id="step-by-step-creating-a-new-anaconda-environment">
+<h3>Step-by-Step: Creating a New Anaconda Environment<a class="headerlink" href="#step-by-step-creating-a-new-anaconda-environment" title="Link to this heading"></a></h3>
+<ol class="simple">
+<li><p><strong>Access Anaconda Prompt:</strong> Open the Anaconda Prompt from your Start Menu.</p></li>
+<li><p><strong>Command to Create a New Environment:</strong> Execute <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">myenv</span> <span class="pre">python=3.8</span></code> (change <code class="docutils literal notranslate"><span class="pre">myenv</span></code> to your preferred environment name, and <code class="docutils literal notranslate"><span class="pre">3.8</span></code> to the Python version you need).</p></li>
+<li><p><strong>Activating the New Environment:</strong> Use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">myenv</span></code> to start working in your newly created environment.</p></li>
+</ol>
+</section>
+<section id="managing-packages-in-your-environment">
+<h3>Managing Packages in Your Environment<a class="headerlink" href="#managing-packages-in-your-environment" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>How to Install Packages:</strong> In your activated environment, install packages with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code>.</p></li>
+<li><p><strong>Viewing Installed Packages:</strong> To see which packages are installed, enter <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>.</p></li>
+<li><p><strong>Updating Packages:</strong> For updates, use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">packagename</span></code>.</p></li>
+<li><p><strong>Removing Packages:</strong> To uninstall, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">packagename</span></code>.</p></li>
+</ul>
+</section>
+<section id="testing-new-or-uncertain-packages">
+<h3>Testing New or Uncertain Packages<a class="headerlink" href="#testing-new-or-uncertain-packages" title="Link to this heading"></a></h3>
+<p>When you encounter a new package or one you’re not sure about, test it in a separate environment, not in your main project environment. This step is vital to protect your primary project from potential issues caused by untested packages.</p>
+</section>
+<section id="additional-resources-for-learning">
+<h3>Additional Resources for Learning<a class="headerlink" href="#additional-resources-for-learning" title="Link to this heading"></a></h3>
+<p>Refer to the <a class="reference external" href="https://docs.anaconda.com/">Anaconda Documentation</a> for more detailed guidance and advanced features of managing Anaconda environments.</p>
+</section>
+</section>
+<section id="database-pipeline">
+<h2>database_pipeline<a class="headerlink" href="#database-pipeline" title="Link to this heading"></a></h2>
+</section>
+<section id="github">
+<h2>Github<a class="headerlink" href="#github" title="Link to this heading"></a></h2>
+<p>datetime and date</p>
+<p>Git</p>
+<p>Use select instead of drop</p>
+<p>use <code class="docutils literal notranslate"><span class="pre">__name__</span> <span class="pre">==__main__</span></code></p>
+<p>call package directly is different from call using other script as base script</p>
+<p>date format</p>
+<p>standard structure of a project</p>
+<ul class="simple">
+<li><p>Main.py</p></li>
+<li><p>Helpers.py</p></li>
+<li><p>ReadData.py</p></li>
+<li><p>Other scripts…</p></li>
+<li></li>
+<li><p>for date variables, always use datetime from datetime</p></li>
+<li><p>no hardcode value: anytime when you use hardcode values they should be stored as a variable at the begining of the script, unless it is 0,1,-1,-2 that indicate the position</p></li>
+<li><p>When selecting columns from dataframe, try your best to select by column name instead of column position index.</p></li>
+<li><p>dont import unused packages or functions</p></li>
+<li><p>at the begining of your scripts, list external and internal imports separately</p></li>
+<li><p>the structure of your program should be like  this</p></li>
+<li><ul>
+<li><p>Helpers.py</p></li>
+<li><p>ReadData.py</p></li>
+<li><p>Other scripts…</p></li>
+<li><p>…</p></li>
+<li><p>A main.py that integrates all operations and functions.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bokun Huang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
