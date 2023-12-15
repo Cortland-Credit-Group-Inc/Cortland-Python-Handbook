@@ -11,6 +11,7 @@ Date: Dec 14, 2023
 
 Version: 1.0
 
+Author: Bokun Huang
 
 .. toctree::
    :maxdepth: 2
