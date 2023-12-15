@@ -21,9 +21,8 @@ Version: 1.0
    GitHub
    Python_Essentials
    Pickle_File
-   importing_local_functions
    Coding_Guidelines
-   
+   importing_local_functions
 
 
 
