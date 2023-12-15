@@ -193,19 +193,21 @@
 
   ```python
   import pandas as pd
-  df = pd.DataFrame({    'A': [1, 2, 3],    'B': [4, 5, 6] })
+  df = pd.DataFrame({    
+      'A': [1, 2, 3],
+      'B': [4, 5, 6] })
   df.apply(lambda x: x * 2)
   ```
 
   Outputs:
-
+  
   ```vbscript
      A   B
   0  2   8
   1  4  10
   2  6  12
   ```
-
+  
   
 
 ## pandas.merge

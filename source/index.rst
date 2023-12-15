@@ -7,6 +7,10 @@ Cortland Credit Python Development Handbook
 ====================================================
 Practices and Essential Concepts for Co-op Student
 -----------------------------------------------------------
+Date: Dec 14, 2023
+
+Version: 1.0
+
 
 .. toctree::
    :maxdepth: 2

@@ -13,11 +13,15 @@ Here are some essential guidelines to adhere to while developing your projects.
   
   current_date = datetime.now()
   print(current_date.strftime("%Y-%m-%d"))
+  
+  date = datetime(2023,12,14)
+  print(date.strftime("%Y%m%d"))
+  #Output:20231214
   ```
 
 ## **No Hardcoded Values**
 
-- **Rule:** Define hardcoded values as constants at the beginning of your script, except for values like 0, 1, -1, -2 indicating positions.
+- **Rule:** Define hardcoded values as constants at the beginning of your script, except for values like 0, -1 indicating positions.
 
 - **Example:**
 
@@ -47,19 +51,22 @@ Here are some essential guidelines to adhere to while developing your projects.
   import pandas as pd
   
   # Sample DataFrame
-  data = {'Name': ['John', 'Anna', 'Peter'], 'Age': [28, 34, 29], 'City': ['New York', 'Paris', 'Berlin']}
+  data = {'Name': ['John', 'Anna', 'Peter'],
+          'Age': [28, 34, 29],
+          'City': ['New York', 'Paris', 'Berlin'],
+          'Date of Birth':[19960318, 19891105, 20000912]}
   df = pd.DataFrame(data)
   
   # Correct Approach: Select columns by name
-  names = df['Name']
-  ages = df['Age']
+  names = df['Age']
+  ages = df['City']
   
   # Incorrect Approach: Select columns by index (Avoid this)
-  names_by_index = df.iloc[:, 0]
-  ages_by_index = df.iloc[:, 1]
+  names_by_index = df.iloc[:, 1]
+  ages_by_index = df.iloc[:, 2]
   
   ```
-
+  
   In this example, columns from the DataFrame `df` are accessed by their names (`'Name'` and `'Age''`). This is preferable to selecting columns by their index positions, as it makes the code more readable and less prone to errors if the column order changes in the DataFrame.
 
 ## **Avoid Importing Unused Packages**
