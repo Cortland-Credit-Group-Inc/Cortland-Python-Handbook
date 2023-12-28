@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Environment Management &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Project Name Convention" href="name_conventions.html" />
+    <link rel="prev" title="Introduction" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cortland-Python-Handbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Environment Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-anaconda-environment-management">Introduction to Anaconda Environment Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#understanding-anaconda-environments">Understanding Anaconda Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#key-principle-avoid-the-base-environment">Key Principle: Avoid the Base Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#step-by-step-creating-a-new-anaconda-environment">Step-by-Step: Creating a New Anaconda Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-packages-in-your-environment">Managing Packages in Your Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-new-or-uncertain-packages">Testing New or Uncertain Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#additional-resources-for-learning">Additional Resources for Learning</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="name_conventions.html">Project Name Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pickle_file.html">Pickle File in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="coding_guidelines.html">Coding Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing_local_functions.html">Importing Functions from Other Scripts/Folders: Best Practices</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cortland-Python-Handbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Environment Management</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/environment_management.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="environment-management">
+<h1>Environment Management<a class="headerlink" href="#environment-management" title="Link to this heading"></a></h1>
+<section id="introduction-to-anaconda-environment-management">
+<h2>Introduction to Anaconda Environment Management<a class="headerlink" href="#introduction-to-anaconda-environment-management" title="Link to this heading"></a></h2>
+<p>Welcome to the world of Python programming with Anaconda! This manual is designed to guide you through the process of creating and managing separate environments for your Python projects, ensuring a safe and efficient development experience.</p>
+</section>
+<section id="understanding-anaconda-environments">
+<h2>Understanding Anaconda Environments<a class="headerlink" href="#understanding-anaconda-environments" title="Link to this heading"></a></h2>
+<p>An Anaconda environment is a self-contained directory that houses a specific version of Python and various packages. This separation is crucial for preventing dependency conflicts between different projects.</p>
+</section>
+<section id="key-principle-avoid-the-base-environment">
+<h2>Key Principle: Avoid the Base Environment<a class="headerlink" href="#key-principle-avoid-the-base-environment" title="Link to this heading"></a></h2>
+<p><strong>Crucial Advice:</strong> Do not develop your work in the base environment. The base environment is your Anaconda installation’s default setting. For each new project, you should create a new environment. This practice keeps your primary workspace clean and free from conflicts.</p>
+</section>
+<section id="step-by-step-creating-a-new-anaconda-environment">
+<h2>Step-by-Step: Creating a New Anaconda Environment<a class="headerlink" href="#step-by-step-creating-a-new-anaconda-environment" title="Link to this heading"></a></h2>
+<ol class="simple">
+<li><p><strong>Access Anaconda Prompt:</strong> Open the Anaconda Prompt from your Start Menu.</p></li>
+<li><p><strong>Command to Create a New Environment:</strong> Execute <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">create</span> <span class="pre">--name</span> <span class="pre">myenv</span> <span class="pre">python=3.8</span></code> (change <code class="docutils literal notranslate"><span class="pre">myenv</span></code> to your preferred environment name, and <code class="docutils literal notranslate"><span class="pre">3.8</span></code> to the Python version you need).</p></li>
+<li><p><strong>Activating the New Environment:</strong> Use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">activate</span> <span class="pre">myenv</span></code> to start working in your newly created environment.</p></li>
+</ol>
+</section>
+<section id="managing-packages-in-your-environment">
+<h2>Managing Packages in Your Environment<a class="headerlink" href="#managing-packages-in-your-environment" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>How to Install Packages:</strong> In your activated environment, install packages with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">packagename</span></code>.</p></li>
+<li><p><strong>Viewing Installed Packages:</strong> To see which packages are installed, enter <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">list</span></code>.</p></li>
+<li><p><strong>Updating Packages:</strong> For updates, use <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">update</span> <span class="pre">packagename</span></code>.</p></li>
+<li><p><strong>Removing Packages:</strong> To uninstall, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">packagename</span></code>.</p></li>
+</ul>
+</section>
+<section id="testing-new-or-uncertain-packages">
+<h2>Testing New or Uncertain Packages<a class="headerlink" href="#testing-new-or-uncertain-packages" title="Link to this heading"></a></h2>
+<p>When you encounter a new package or one you’re not sure about, test it in a separate environment, not in your main project environment. This step is vital to protect your primary project from potential issues caused by untested packages.</p>
+</section>
+<section id="additional-resources-for-learning">
+<h2>Additional Resources for Learning<a class="headerlink" href="#additional-resources-for-learning" title="Link to this heading"></a></h2>
+<p>Refer to the <a class="reference external" href="https://docs.anaconda.com/">Anaconda Documentation</a> for more detailed guidance and advanced features of managing Anaconda environments.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="name_conventions.html" class="btn btn-neutral float-right" title="Project Name Convention" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bokun Huang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

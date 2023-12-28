@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pickle File in Python &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Coding Guidelines" href="coding_guidelines.html" />
+    <link rel="prev" title="Python Essentials: Key Concepts &amp; Techniques" href="python_essentials.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cortland-Python-Handbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_management.html">Environment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="name_conventions.html">Project Name Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Pickle File in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-is-a-pickle-file-in-python">What is a Pickle File in Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#why-use-pickle">Why Use Pickle?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-the-pickle-module">How to Use the Pickle Module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#considerations-and-best-practices">Considerations and Best Practices</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="coding_guidelines.html">Coding Guidelines</a></li>
+<li class="toctree-l1"><a class="reference internal" href="importing_local_functions.html">Importing Functions from Other Scripts/Folders: Best Practices</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cortland-Python-Handbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Pickle File in Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/pickle_file.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pickle-file-in-python">
+<h1>Pickle File in Python<a class="headerlink" href="#pickle-file-in-python" title="Link to this heading"></a></h1>
+<section id="what-is-a-pickle-file-in-python">
+<h2>What is a Pickle File in Python?<a class="headerlink" href="#what-is-a-pickle-file-in-python" title="Link to this heading"></a></h2>
+<p>A pickle file is a way to serialize and deserialize Python objects. Serialization is the process of converting a Python object (like a list, dict, etc.) into a byte stream that can be saved to a file or transmitted over a network. Deserialization is the reverse process, where the byte stream is converted back into a Python object.</p>
+</section>
+<section id="why-use-pickle">
+<h2>Why Use Pickle?<a class="headerlink" href="#why-use-pickle" title="Link to this heading"></a></h2>
+<ol class="simple">
+<li><p><strong>Persistence of Python Objects:</strong> Pickle allows you to save complex Python objects, like class instances, directly to a file, retaining their state and structure. This is useful for saving model states, configurations, or data that needs to be processed later.</p></li>
+<li><p><strong>Easy to Use:</strong> The pickle module in Python provides a straightforward interface for serialization and deserialization, making it easy to use for beginners.</p></li>
+<li><p><strong>Efficiency:</strong> Pickle can efficiently serialize and deserialize Python objects, which can be faster than converting data to and from other formats like JSON or XML for complex objects.</p></li>
+</ol>
+</section>
+<section id="how-to-use-the-pickle-module">
+<h2>How to Use the Pickle Module<a class="headerlink" href="#how-to-use-the-pickle-module" title="Link to this heading"></a></h2>
+<ol>
+<li><p><strong>Importing the Module:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>Pickle an Object (Serialization):</strong> To save a Python object to a file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;wb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">your_object</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code writes the serialized version of <code class="docutils literal notranslate"><span class="pre">your_object</span></code> to <code class="docutils literal notranslate"><span class="pre">filename.pkl</span></code>.</p>
+</li>
+<li><p><strong>Unpickle an Object (Deserialization):</strong> To load a Python object from a file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="s1">&#39;filename.pkl&#39;</span><span class="p">,</span> <span class="s1">&#39;rb&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">your_object</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This code reads the serialized object from <code class="docutils literal notranslate"><span class="pre">filename.pkl</span></code> and converts it back into a Python object.</p>
+</li>
+</ol>
+</section>
+<section id="considerations-and-best-practices">
+<h2>Considerations and Best Practices<a class="headerlink" href="#considerations-and-best-practices" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Security:</strong> Be cautious when unpickling objects from untrusted sources. Pickle files can execute arbitrary code during unpickling, which can be a security risk.</p></li>
+<li><p><strong>Portability:</strong> Pickle is specific to Python and relies on the exact class structure, which can cause issues if the class definition changes or if the file is shared across different Python versions.</p></li>
+<li><p><strong>Alternatives:</strong> For simple data structures, consider using JSON or XML, which are more portable and secure. For complex Python objects where performance and Python specificity are crucial, pickle is a good choice.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="python_essentials.html" class="btn btn-neutral float-left" title="Python Essentials: Key Concepts &amp; Techniques" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="coding_guidelines.html" class="btn btn-neutral float-right" title="Coding Guidelines" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bokun Huang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

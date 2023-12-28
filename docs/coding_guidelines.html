@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coding Guidelines &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Importing Functions from Other Scripts/Folders: Best Practices" href="importing_local_functions.html" />
+    <link rel="prev" title="Pickle File in Python" href="pickle_file.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Cortland-Python-Handbook
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment_management.html">Environment Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="name_conventions.html">Project Name Convention</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pickle_file.html">Pickle File in Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Coding Guidelines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#use-datetime-for-date-variables"><strong>Use datetime for Date Variables</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#no-hardcoded-values"><strong>No Hardcoded Values</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#select-dataframe-columns-by-name"><strong>Select DataFrame Columns by Name</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#avoid-importing-unused-packages"><strong>Avoid Importing Unused Packages</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#organize-imports"><strong>Organize Imports</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#structured-program-organization"><strong>Structured Program Organization</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="importing_local_functions.html">Importing Functions from Other Scripts/Folders: Best Practices</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Cortland-Python-Handbook</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Coding Guidelines</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/coding_guidelines.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="coding-guidelines">
+<h1>Coding Guidelines<a class="headerlink" href="#coding-guidelines" title="Link to this heading"></a></h1>
+<p>Here are some essential guidelines to adhere to while developing your projects.</p>
+<section id="use-datetime-for-date-variables">
+<h2><strong>Use datetime for Date Variables</strong><a class="headerlink" href="#use-datetime-for-date-variables" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Rule:</strong> Always utilize the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> module from the <code class="docutils literal notranslate"><span class="pre">datetime</span></code> package for handling date and time values.</p></li>
+<li><p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="n">current_date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">current_date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">))</span>
+
+<span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2023</span><span class="p">,</span><span class="mi">12</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%Y%m</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">))</span>
+<span class="c1">#Output:20231214</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="no-hardcoded-values">
+<h2><strong>No Hardcoded Values</strong><a class="headerlink" href="#no-hardcoded-values" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Rule:</strong> Define hardcoded values as constants at the beginning of your script, except for values like 0, -1 indicating positions.</p></li>
+<li><p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correct Approach: Define hardcoded values as constants at the beginning of the script</span>
+<span class="n">MAX_RETRY</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">TIMEOUT</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">URL</span> <span class="o">=</span> <span class="s2">&quot;http://example.com/api/data&quot;</span>
+
+<span class="k">def</span> <span class="nf">fetch_data</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">MAX_RETRY</span><span class="p">):</span>
+        <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">TIMEOUT</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="k">return</span> <span class="kc">None</span>
+</pre></div>
+</div>
+<p>In this example, values like <code class="docutils literal notranslate"><span class="pre">MAX_RETRY</span></code>, <code class="docutils literal notranslate"><span class="pre">TIMEOUT</span></code>, and <code class="docutils literal notranslate"><span class="pre">URL</span></code> are defined at the beginning of the script as constants. This makes it easier to change these values in the future without searching through the entire codebase.</p>
+</li>
+</ul>
+</section>
+<section id="select-dataframe-columns-by-name">
+<h2><strong>Select DataFrame Columns by Name</strong><a class="headerlink" href="#select-dataframe-columns-by-name" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Rule:</strong> Prefer selecting columns in pandas DataFrames by their name rather than by their positional index.</p></li>
+<li><p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="c1"># Sample DataFrame</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Name&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;John&#39;</span><span class="p">,</span> <span class="s1">&#39;Anna&#39;</span><span class="p">,</span> <span class="s1">&#39;Peter&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Age&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">28</span><span class="p">,</span> <span class="mi">34</span><span class="p">,</span> <span class="mi">29</span><span class="p">],</span>
+        <span class="s1">&#39;City&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span> <span class="s1">&#39;Paris&#39;</span><span class="p">,</span> <span class="s1">&#39;Berlin&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Date of Birth&#39;</span><span class="p">:[</span><span class="mi">19960318</span><span class="p">,</span> <span class="mi">19891105</span><span class="p">,</span> <span class="mi">20000912</span><span class="p">]}</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+<span class="c1"># Correct Approach: Select columns by name</span>
+<span class="n">names</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">]</span>
+<span class="n">ages</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;City&#39;</span><span class="p">]</span>
+
+<span class="c1"># Incorrect Approach: Select columns by index (Avoid this)</span>
+<span class="n">names_by_index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span>
+<span class="n">ages_by_index</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>In this example, columns from the DataFrame <code class="docutils literal notranslate"><span class="pre">df</span></code> are accessed by their names (<code class="docutils literal notranslate"><span class="pre">'Name'</span></code> and <code class="docutils literal notranslate"><span class="pre">'Age''</span></code>). This is preferable to selecting columns by their index positions, as it makes the code more readable and less prone to errors if the column order changes in the DataFrame.</p>
+</li>
+</ul>
+</section>
+<section id="avoid-importing-unused-packages">
+<h2><strong>Avoid Importing Unused Packages</strong><a class="headerlink" href="#avoid-importing-unused-packages" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Rule:</strong> Refrain from importing packages or functions that you do not use in your script.</p></li>
+</ul>
+</section>
+<section id="organize-imports">
+<h2><strong>Organize Imports</strong><a class="headerlink" href="#organize-imports" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>Rule:</strong> List external (third-party) and internal (project-specific) imports separately at the start of your scripts.</p></li>
+</ul>
+</section>
+<section id="structured-program-organization">
+<h2><strong>Structured Program Organization</strong><a class="headerlink" href="#structured-program-organization" title="Link to this heading"></a></h2>
+<ul>
+<li><p><strong>Structure:</strong> Adopt a clear program structure with dedicated scripts for different functionalities, such as <code class="docutils literal notranslate"><span class="pre">Helpers.py</span></code>, <code class="docutils literal notranslate"><span class="pre">ReadData.py</span></code>, and a central <code class="docutils literal notranslate"><span class="pre">Main.py</span></code>.</p></li>
+<li><p><strong>Example:</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>YourProject/
+│
+├──<span class="w"> </span>Main.py<span class="w">                    </span><span class="c1"># Main script to integrate and run the entire program</span>
+│
+├──<span class="w"> </span>Helpers.py<span class="w">                 </span><span class="c1"># Contains utility functions and classes</span>
+│
+├──<span class="w"> </span>ReadData.py<span class="w">                </span><span class="c1"># Dedicated to data reading and preprocessing tasks</span>
+│
+├──<span class="w"> </span>OtherScript1.py<span class="w">            </span><span class="c1"># Additional script for a specific functionality</span>
+│
+├──<span class="w"> </span>OtherScript2.py<span class="w">            </span><span class="c1"># Another script for a different functionality</span>
+│
+└──<span class="w"> </span>...<span class="w">                        </span><span class="c1"># Additional scripts as needed</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="pickle_file.html" class="btn btn-neutral float-left" title="Pickle File in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="importing_local_functions.html" class="btn btn-neutral float-right" title="Importing Functions from Other Scripts/Folders: Best Practices" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Bokun Huang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
