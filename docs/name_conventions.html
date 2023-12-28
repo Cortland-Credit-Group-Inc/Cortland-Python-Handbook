@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Cortland-Python-Handbook 1.0 documentation</title>
+  <title>Project Name Convention &mdash; Cortland-Python-Handbook 1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=92fd9be5" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
       <link rel="stylesheet" type="text/css" href="_static/my_theme.css?v=1e48dca6" />
@@ -22,8 +22,8 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Environment Management" href="environment_management.html" />
-    <link rel="prev" title="Cortland Credit Python Development Handbook" href="index.html" /> 
+    <link rel="next" title="Python Essentials: Key Concepts &amp; Techniques" href="python_essentials.html" />
+    <link rel="prev" title="Environment Management" href="environment_management.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -47,9 +47,9 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="environment_management.html">Environment Management</a></li>
-<li class="toctree-l1"><a class="reference internal" href="name_conventions.html">Project Name Convention</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Project Name Convention</a></li>
 <li class="toctree-l1"><a class="reference internal" href="python_essentials.html">Python Essentials: Key Concepts &amp; Techniques</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pickle_file.html">Pickle File in Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="coding_guidelines.html">Coding Guidelines</a></li>
@@ -70,9 +70,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Introduction</li>
+      <li class="breadcrumb-item active">Project Name Convention</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="_sources/introduction.md.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/name_conventions.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -80,25 +80,27 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
-<p>This handbook is designed as a comprehensive guide for new Co-op students. We aim to equip you with the foundational knowledge and essential rules for effective Python development in Cortland Credit.</p>
-<p><strong>What You Will Learn</strong></p>
-<ul class="simple">
-<li><p><strong>Anaconda Environment Management:</strong> Gain crucial insights into managing Python environments using Anaconda. This knowledge is vital for maintaining project-specific dependencies and ensuring a consistent development environment, which is a cornerstone of professional Python development.</p></li>
-<li><p><strong>GitHub Usage:</strong> Learn how to effectively use GitHub for version control and collaboration. This includes understanding basic operations such as branching, committing, pushing, pulling, and merging, as well as best practices for managing code in a shared repository.</p></li>
-<li><p><strong>Essential Python Concepts and Operations:</strong> Dive into the core elements of Python programming, including classes, decorators, and common data operations. This section lays the groundwork for understanding Python’s syntax and functionalities.</p></li>
-<li><p><strong>Python Development Guidelines for Interns:</strong> Discover a set of guidelines tailored to ensure you write clean, efficient, and maintainable code. From handling date variables to structuring your program correctly, these rules are pivotal in professional Python development.</p></li>
-<li><p><strong>Importing Functions and Scripts Management:</strong> Learn the intricacies of importing functions and managing scripts across different folders. This knowledge is crucial for working on larger projects where code organization becomes key.</p></li>
-</ul>
+  <section id="project-name-convention">
+<h1>Project Name Convention<a class="headerlink" href="#project-name-convention" title="Link to this heading"></a></h1>
+<p>As you embark on your internship with our Python projects, it’s important to familiarize yourself with some key naming conventions. These conventions are not just arbitrary rules; they help keep our code clean, organized, and easy to read. Here’s a quick guide to help you adhere to these best practices:</p>
+<ol class="simple">
+<li><p><strong>Packages</strong>: Name your packages in all lowercase letters. If needed, use underscores to improve readability, but aim for short, simple names (e.g., <code class="docutils literal notranslate"><span class="pre">data_processor</span></code>).</p></li>
+<li><p><strong>Scripts</strong>: Like packages, script names should also be all lowercase. Use underscores to separate words. The name should reflect the script’s functionality (e.g., <code class="docutils literal notranslate"><span class="pre">manage_inventory.py</span></code>).</p></li>
+<li><p><strong>Classes</strong>: Classes should follow the CapWords convention, where each word in the class name starts with a capital letter without underscores (e.g., <code class="docutils literal notranslate"><span class="pre">InventoryManager</span></code>). This is also known as CamelCase.</p></li>
+<li><p><strong>Functions</strong>: Function names should be lowercase, with words separated by underscores for readability. Choose descriptive names that clearly indicate what the function does (e.g., <code class="docutils literal notranslate"><span class="pre">calculate_total</span></code>).</p></li>
+<li><p><strong>Variables</strong>: Use lowercase letters and underscores for variables (e.g., <code class="docutils literal notranslate"><span class="pre">item_list</span></code>). This makes them easily distinguishable from class names.</p></li>
+<li><p><strong>Constants</strong>: Define constants in all capital letters, with underscores separating words. These are typically set at the module level (e.g., <code class="docutils literal notranslate"><span class="pre">MAX_LIMIT</span></code>).</p></li>
+<li><p><strong>Overall Project Name</strong>: Choose an overall project name with a Cap-Word style, where each word starts with an uppercase letter and is connected with a hyphen.</p></li>
+</ol>
+<p>These guidelines are aligned with PEP 8, Python’s official style guide, and help maintain a standard across the Python community. By following these conventions, you’ll not only make your code more accessible to others but also ensure a cohesive and professional codebase within our project.</p>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Cortland Credit Python Development Handbook" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="environment_management.html" class="btn btn-neutral float-right" title="Environment Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="environment_management.html" class="btn btn-neutral float-left" title="Environment Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python_essentials.html" class="btn btn-neutral float-right" title="Python Essentials: Key Concepts &amp; Techniques" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

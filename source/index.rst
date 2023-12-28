@@ -18,12 +18,14 @@ Author: Bokun Huang
    :caption: Contents:
 
    introduction
-   Environment_Management
-   GitHub
-   Python_Essentials
-   Pickle_File
-   Coding_Guidelines
+   environment_management
+   github
+   name_conventions
+   python_essentials
+   pickle_file
+   coding_guidelines
    importing_local_functions
+   
 
 
 
